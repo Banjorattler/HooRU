@@ -1,0 +1,59 @@
+public void getZodiacSign(){
+switch(dateInput){
+case after(Date ariesMin) && before(Date ariesMax):
+zodiac = "Aries";
+break;
+
+
+}
+}
+
+public void getChineseZodiac(){
+switch(year){
+case year % 12 == 4:
+chinese = "Rat";
+break;
+
+case year % 12 == 5:
+chinese = "Ox";
+break;
+
+case year % 12 == 6:
+chinese = "Tiger"
+break;
+
+case year % 12 == 7
+chinese = "Rabbit"
+break;
+
+case year % 12 == 8:
+chinese = "Dragon"
+break;
+
+case year % 12 == 9:
+chinese = "Snake"
+break;
+
+case year % 12 == 10:
+chinese = "Horse"
+break;
+
+case year % 12 == 11:
+chinese = "Goat"
+break;
+
+case year % 12 == 0:
+chinese = "Monkey"
+break;
+
+case year % 12 == 1:
+chinese = "Rooster"
+break;
+
+case year % 12 == 2:
+chinese = "Dog"
+break;
+
+case year % 12 == 3:
+chinese = "Pig"
+break;

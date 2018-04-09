@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorBackground"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:labelFor="@id/editTextName"
+        android:text="@string/text_view_name"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/editTextName"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="30dp"
+        android:minWidth="100dp"
+        android:width="100dp"
+        android:inputType="text"
+        android:maxWidth="200dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/textViewName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <DatePicker
+        android:background="@color/widgetBackground"
+        android:id="@+id/datePicker"
+        android:layout_width="232dp"
+        android:layout_height="229dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:minDate=""
+        android:startYear="1979"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+    <Button
+        android:textColor="@color/colorBackground"
+        android:background="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:width="100dp"
+        android:maxWidth="200dp"
+        android:id="@+id/buttonSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="148dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/button_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
+
+</android.support.constraint.ConstraintLayout>

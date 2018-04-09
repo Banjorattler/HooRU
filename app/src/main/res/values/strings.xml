@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="app_name">HooRU</string>
+    <string name="text_view_name">Name:</string>
+    <string name="button_submit">Submit</string>
+
+</resources>
