@@ -39,7 +39,6 @@ public class DisplayInfo extends AppCompatActivity  {
 
         getZodiac();
         getChineseZodiac();
-        output();
     }
 
     public void getZodiac(){
