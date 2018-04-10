@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.Calendar;
+
 
 public class DisplayInfo extends AppCompatActivity  {
 
@@ -200,6 +202,7 @@ public class DisplayInfo extends AppCompatActivity  {
         String outputStr = "";
 
         outputStr += "Name: " + Name;
+        outputStr += "Current date: " + Calendar.getInstance().toString();
         outputStr += "\nBirth date: " + (Month + 1) + "/" + Day + "/" + Year;
         outputStr += "\n\nZodiac sign: " + zodiac;
         outputStr += "\n" + zodiacDesc;
