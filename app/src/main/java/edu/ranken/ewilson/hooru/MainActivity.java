@@ -1,5 +1,6 @@
 package edu.ranken.ewilson.hooru;
 
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,11 +11,11 @@ import android.widget.EditText;
 import android.widget.Button;
 import android.widget.Toast;
 
-
-
+import java.time.Year;
 import java.util.Calendar;
 
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,25 +33,31 @@ public class MainActivity extends AppCompatActivity {
         textViewName = findViewById(R.id.textViewName);
         editTextName = findViewById(R.id.editTextName);
         initializeDatePicker();
+
         buttonSubmit = findViewById(R.id.buttonSubmit);
 
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(this, DisplayInfo.class);
-                editTextName = (EditText) findViewById(R.id.editTextName);
-                String message = editTextName.getText().toString();
-                intent.putExtra(EXTRA_MESSAGE, message);
-                startActivity(intent);
-            }
+                makeIntent();
+        }
         });
 
+    }
+
+    public void makeIntent(){
+        Intent intent = new Intent(this, DisplayInfo.class);
+        editTextName = (EditText) findViewById(R.id.editTextName);
+        String message = editTextName.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 
     public void initializeDatePicker(){
         datePicker = findViewById(R.id.datePicker);
         datePicker.setCalendarViewShown(false);
         datePicker.setSpinnersShown(true);
+        datePicker.setMaxDate(System.currentTimeMillis() - 1000);
     }
 
     public void datePicked (){

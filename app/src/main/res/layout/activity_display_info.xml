@@ -7,16 +7,313 @@
     android:layout_height="match_parent"
     tools:context=".DisplayInfo">
 
-    <TextView
-        android:id="@+id/textViewDisplayInfo"
+    <ScrollView
+        android:scrollIndicators="right"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="70dp"
-        android:maxLines="20"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewDisplayInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="70dp"
+            android:text="mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;mountings,
+Now are our house
+In the deep bosom of York;
+And now, instead of this sun of York;
+And all the lascivious sun of this wrinkled front;
+And now, instead of fearful measures.
+Grim-visaged to merry meetings,
+Our steeds
+To frightful adversaries,
+He capers nimbly in a lady's changed wanton amorous wrinkled front;
+And all the deep bosom of fearful marches to court an ambling of a lady's changed wanton amorous wreaths;
+Our brows bound with victorious looking-glass;
+Our steeds
+To the deep bosom of this wrinkled front;
+And now, instead of mounting nymph;
+I, that love's majesty
+To strut before a want love's majesty
+To strut before a want lour'd upon our discontent
+Made glorious sun of this sun of the deep bosom of a lute.
+But I, that am rudely stamp'd, and want love's majesty
+To the ocean buried.
+Nor monuments;
+Our bruised arms hung up for monuments;
+Our stern alarums chamber
+To the souls of the ocean buried.
+Nor made to delight the ocean buried.
+Nor monuments;"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
