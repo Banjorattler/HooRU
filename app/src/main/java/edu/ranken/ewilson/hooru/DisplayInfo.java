@@ -39,6 +39,7 @@ public class DisplayInfo extends AppCompatActivity  {
 
         getZodiac();
         getChineseZodiac();
+        output();
     }
 
     public void getZodiac(){
@@ -192,5 +193,20 @@ public class DisplayInfo extends AppCompatActivity  {
             default:
                 element = "Metal";
         }
+    }
+
+    public void output(){
+
+        String outputStr = "";
+
+        outputStr += "Name: " + Name;
+        outputStr += "\nBirth date: " + (Month + 1) + "/" + Day + "/" + Year;
+        outputStr += "\n\nZodiac sign: " + zodiac;
+        outputStr += "\n" + zodiacDesc;
+        outputStr += "\n\nChinese zodiac sign: " + chinese;
+        outputStr += "\n" + chineseDesc;
+        outputStr += "\nElement: " + element;
+
+        textViewDisplayInfo.append(outputStr);
     }
 }
