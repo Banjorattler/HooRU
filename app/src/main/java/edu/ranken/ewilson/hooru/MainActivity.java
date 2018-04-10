@@ -48,8 +48,15 @@ public class MainActivity extends AppCompatActivity {
     public void makeIntent(){
         Intent intent = new Intent(this, DisplayInfo.class);
         editTextName = (EditText) findViewById(R.id.editTextName);
-        String message = editTextName.getText().toString();
-        intent.putExtra(EXTRA_MESSAGE, message);
+        String name = editTextName.getText().toString();
+        intent.putExtra("Name", name);
+        datePicker = findViewById((R.id.datePicker));
+        int day = datePicker.getDayOfMonth();
+        intent.putExtra("Day", day);
+        int month = datePicker.getMonth();
+        intent.putExtra("Month", month);
+        int year = datePicker.getYear();
+        intent.putExtra("Year", year);
         startActivity(intent);
     }
 
