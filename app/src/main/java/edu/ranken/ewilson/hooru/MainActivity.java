@@ -66,20 +66,4 @@ public class MainActivity extends AppCompatActivity {
         datePicker.setSpinnersShown(true);
         datePicker.setMaxDate(System.currentTimeMillis() - 1000);
     }
-
-    public void datePicked (){
-
-        int day = datePicker.getDayOfMonth();
-        int month = datePicker.getMonth();
-        int year = datePicker.getYear();
-        Calendar currentTime = Calendar.getInstance();
-
-        if((year > currentTime.get(Calendar.YEAR) || (month > currentTime.get(Calendar.MONTH)) || year > currentTime.get(Calendar.DAY_OF_MONTH))){
-            Toast.makeText(this, "Enter a date that is not a future date.", Toast.LENGTH_LONG).show();
-            buttonSubmit.setEnabled(false);
-        }else{
-            buttonSubmit.setEnabled(true);
-        }
-
-    }
 }

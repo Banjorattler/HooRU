@@ -22,6 +22,10 @@ public class DisplayInfo extends AppCompatActivity  {
     private String chinese;
     private String chineseDesc;
     private String element;
+    private int yearsOld;
+    private int monthsOld;
+    private int daysOld;
+    private int dayOfYear;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +45,8 @@ public class DisplayInfo extends AppCompatActivity  {
 
         getZodiac();
         getChineseZodiac();
+        dateDiff();
+        daysOld();
         output();
     }
 
@@ -197,13 +203,97 @@ public class DisplayInfo extends AppCompatActivity  {
         }
     }
 
+    public void dateDiff(){
+        Calendar currentDate = Calendar.getInstance();
+
+        yearsOld = currentDate.get(Calendar.YEAR) - Year;
+
+        if(currentDate.get(Calendar.MONTH) < Month){
+            yearsOld = yearsOld - 1;
+            monthsOld = (currentDate.get(Calendar.MONTH) + 11) - Month;
+            if(currentDate.get(Calendar.DAY_OF_MONTH) == Day){
+                ++monthsOld;
+            }
+        }
+        else if((currentDate.get(Calendar.MONTH) == Month) && currentDate.get(Calendar.DAY_OF_MONTH) < Day){
+            yearsOld = yearsOld - 1;
+            monthsOld = 11;
+        }
+        else{
+            monthsOld = currentDate.get(Calendar.MONTH) - Month;
+        }
+        if(currentDate.get(Calendar.DAY_OF_MONTH) < Day){
+            if(Month == 0 || Month == 2 || Month == 4 || Month == 6 || Month == 7 || Month == 9 || Month == 11){
+                daysOld = (31 - Day) + currentDate.get(Calendar.DAY_OF_MONTH);
+            }
+            else if((Month + 1) == 4 || (Month + 1) == 6 || (Month + 1) == 9 || (Month + 1) == 11){
+                daysOld = (30 - Day) + currentDate.get(Calendar.DAY_OF_MONTH);
+            }
+            else if((Month + 1) == 2 && (currentDate.get(Calendar.YEAR) % 4 == 0) || (currentDate.get(Calendar.YEAR) % 100 == 0) || (currentDate.get(Calendar.YEAR) % 400 ==0)){
+                daysOld = (29 - Day) + currentDate.get(Calendar.DAY_OF_MONTH);
+            }
+            else{
+                daysOld = (28 - Day) + currentDate.get(Calendar.DAY_OF_MONTH);
+            }
+        }
+        else{
+            daysOld = currentDate.get(Calendar.DAY_OF_MONTH) - Day;
+        }
+    }
+
+    public void daysOld(){
+
+        if(Month == 1){
+            dayOfYear = Day + 31;
+        }
+        else if(Month == 2){
+            dayOfYear = Day + 59;
+        }
+        else if(Month == 3){
+            dayOfYear = Day + 90;
+        }
+        else if(Month == 4){
+            dayOfYear = Day + 120;
+        }
+        else if(Month == 5){
+            dayOfYear = Day + 151;
+        }
+        else if(Month == 6){
+            dayOfYear = Day + 181;
+        }
+        else if(Month == 7){
+            dayOfYear = Day + 212;
+        }
+        else if(Month == 8){
+            dayOfYear = Day + 243;
+        }
+        else if(Month == 9){
+            dayOfYear = Day + 273;
+        }
+        else if(Month == 10){
+            dayOfYear = Day + 304;
+        }
+        else if(Month == 11){
+            dayOfYear = Day + 334;
+        }
+        else{
+            dayOfYear = Day;
+        }
+        if(Year % 4 == 0 || Year % 100 == 0 || Year % 400 == 0 && Month > 1 && Day != 29){
+            ++dayOfYear;
+        }
+    }
+
     public void output(){
 
+        Calendar currentDate = Calendar.getInstance();
         String outputStr = "";
 
         outputStr += "Name: " + Name;
-        outputStr += "Current date: " + Calendar.getInstance().toString();
+        outputStr += "\nCurrent date: " + (currentDate.get(Calendar.MONTH) + 1) + "/" + currentDate.get(Calendar.DAY_OF_MONTH) + "/" + currentDate.get(Calendar.YEAR);
         outputStr += "\nBirth date: " + (Month + 1) + "/" + Day + "/" + Year;
+        outputStr += "\nAge: " + yearsOld + " years, " + monthsOld + " months, " + daysOld + " days.";
+        outputStr += "\nDay of year born: " + dayOfYear;
         outputStr += "\n\nZodiac sign: " + zodiac;
         outputStr += "\n" + zodiacDesc;
         outputStr += "\n\nChinese zodiac sign: " + chinese;
