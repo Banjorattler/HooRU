@@ -16,7 +16,6 @@ public class DisplayInfo extends AppCompatActivity  {
     private int Day;
     private int Month;
     private int Year;
-    private String CurrentDate;
     private String zodiac;
     private String zodiacDesc;
     private String chinese;
