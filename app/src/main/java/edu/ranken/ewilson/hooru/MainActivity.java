@@ -1,7 +1,9 @@
 package edu.ranken.ewilson.hooru;
 
-
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,12 +11,9 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.Button;
-import android.widget.Toast;
 
-import java.time.Year;
 import java.util.Calendar;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         buttonSubmit = findViewById(R.id.buttonSubmit);
 
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
                 makeIntent();
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @TargetApi(Build.VERSION_CODES.O)
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void makeIntent(){
         Intent intent = new Intent(this, DisplayInfo.class);
         editTextName = (EditText) findViewById(R.id.editTextName);
@@ -57,29 +59,30 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("Month", month);
         int year = datePicker.getYear();
         intent.putExtra("Year", year);
+        String currentDate = currentDate();
+        intent.putExtra("CurrentDate", currentDate);
         startActivity(intent);
     }
+
+
+    public String currentDate(){
+        return Calendar.getInstance().toString();
+    }
+
+
+
 
     public void initializeDatePicker(){
         datePicker = findViewById(R.id.datePicker);
         datePicker.setCalendarViewShown(false);
         datePicker.setSpinnersShown(true);
         datePicker.setMaxDate(System.currentTimeMillis() - 1000);
-    }
 
-    public void datePicked (){
-
-        int day = datePicker.getDayOfMonth();
-        int month = datePicker.getMonth();
-        int year = datePicker.getYear();
-        Calendar currentTime = Calendar.getInstance();
-
-        if((year > currentTime.get(Calendar.YEAR) || (month > currentTime.get(Calendar.MONTH)) || year > currentTime.get(Calendar.DAY_OF_MONTH))){
-            Toast.makeText(this, "Enter a date that is not a future date.", Toast.LENGTH_LONG).show();
-            buttonSubmit.setEnabled(false);
-        }else{
-            buttonSubmit.setEnabled(true);
-        }
+        datePicker.getYear();
+        datePicker.getMonth();
+        datePicker.getDayOfMonth();
 
     }
+
+
 }

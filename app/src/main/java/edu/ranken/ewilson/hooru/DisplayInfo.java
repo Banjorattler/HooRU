@@ -1,13 +1,12 @@
 package edu.ranken.ewilson.hooru;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
-
+import java.util.Date;
 
 public class DisplayInfo extends AppCompatActivity  {
 
@@ -17,6 +16,7 @@ public class DisplayInfo extends AppCompatActivity  {
     private int Day;
     private int Month;
     private int Year;
+    private String CurrentDate;
     private String zodiac;
     private String zodiacDesc;
     private String chinese;
@@ -38,7 +38,6 @@ public class DisplayInfo extends AppCompatActivity  {
         Month = month;
         int year = bundle.getInt("Year");
         Year = year;
-
         getZodiac();
         getChineseZodiac();
         output();
@@ -200,9 +199,8 @@ public class DisplayInfo extends AppCompatActivity  {
     public void output(){
 
         String outputStr = "";
-
         outputStr += "Name: " + Name;
-        outputStr += "Current date: " + Calendar.getInstance().toString();
+        outputStr += "\n" + setCurrentDate();
         outputStr += "\nBirth date: " + (Month + 1) + "/" + Day + "/" + Year;
         outputStr += "\n\nZodiac sign: " + zodiac;
         outputStr += "\n" + zodiacDesc;
@@ -212,4 +210,15 @@ public class DisplayInfo extends AppCompatActivity  {
 
         textViewDisplayInfo.append(outputStr);
     }
+
+    public String setCurrentDate(){
+        Calendar cal = Calendar.getInstance();
+        // You cannot use Date class to extract individual Date fields
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);      // 0 to 11
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+
+        return ("Today's date: " + (month+1) + "/" + day + "/" + year);
+    }
+
 }
