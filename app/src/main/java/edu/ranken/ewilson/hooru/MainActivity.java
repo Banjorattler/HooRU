@@ -10,6 +10,7 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.Button;
+
 import java.util.Calendar;
 
 public class MainActivity extends AppCompatActivity {
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
     public String currentDate(){
         return Calendar.getInstance().toString();
     }
+
 
     public void initializeDatePicker(){
         datePicker = findViewById(R.id.datePicker);
