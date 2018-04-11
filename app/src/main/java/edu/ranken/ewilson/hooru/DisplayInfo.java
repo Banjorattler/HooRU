@@ -1,13 +1,10 @@
 package edu.ranken.ewilson.hooru;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
 import java.util.Calendar;
-
 
 public class DisplayInfo extends AppCompatActivity  {
 
