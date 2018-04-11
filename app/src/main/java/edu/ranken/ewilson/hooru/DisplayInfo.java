@@ -203,6 +203,7 @@ public class DisplayInfo extends AppCompatActivity  {
         }
     }
 
+    //calculates age to the day
     public void dateDiff(){
         Calendar currentDate = Calendar.getInstance();
 
