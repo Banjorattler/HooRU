@@ -1,6 +1,5 @@
 package edu.ranken.ewilson.hooru;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
@@ -11,10 +10,7 @@ import android.widget.DatePicker;
 import android.widget.TextView;
 import android.widget.EditText;
 import android.widget.Button;
-
 import java.util.Calendar;
-
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,18 +19,14 @@ public class MainActivity extends AppCompatActivity {
     DatePicker datePicker;
     Button buttonSubmit;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         textViewName = findViewById(R.id.textViewName);
         editTextName = findViewById(R.id.editTextName);
         initializeDatePicker();
-
         buttonSubmit = findViewById(R.id.buttonSubmit);
-
         buttonSubmit.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
@@ -45,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @TargetApi(Build.VERSION_CODES.O)
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public void makeIntent(){
         Intent intent = new Intent(this, DisplayInfo.class);
         editTextName = (EditText) findViewById(R.id.editTextName);
@@ -64,25 +54,17 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-
     public String currentDate(){
         return Calendar.getInstance().toString();
     }
-
-
-
 
     public void initializeDatePicker(){
         datePicker = findViewById(R.id.datePicker);
         datePicker.setCalendarViewShown(false);
         datePicker.setSpinnersShown(true);
         datePicker.setMaxDate(System.currentTimeMillis() - 1000);
-
         datePicker.getYear();
         datePicker.getMonth();
         datePicker.getDayOfMonth();
-
     }
-
-
 }

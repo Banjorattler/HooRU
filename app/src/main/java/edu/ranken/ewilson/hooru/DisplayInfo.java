@@ -4,14 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 
 public class DisplayInfo extends AppCompatActivity  {
-
     TextView textViewDisplayInfo;
-
     private String Name;
     private int Day;
     private int Month;
@@ -43,7 +39,6 @@ public class DisplayInfo extends AppCompatActivity  {
     }
 
     public void getZodiac(){
-
         if(((Month == 11) && (Day >= 22)) || ((Month == 0) && (Day <= 19))){
             zodiac = "Capricorn";
             zodiacDesc = "The measured master planner of the horoscope family, Capricorn energy teaches us the power of structure and long-term goals.";
@@ -95,68 +90,55 @@ public class DisplayInfo extends AppCompatActivity  {
     }
 
     public void getChineseZodiac(){
-
         switch(Year % 12) {
             case 4:
                 chinese = "Rat";
                 chineseDesc = "Quick-witted, resourceful, and versatile";
                 break;
-
             case 5:
                 chinese = "Ox";
                 chineseDesc = "Decisive, honest, dependable, and hardworking";
                 break;
-
             case 6:
                 chinese = "Tiger";
                 chineseDesc = "Brave, competitive, unpredictable, and self-confident";
                 break;
-
             case 7:
                 chinese = "Rabbit";
                 chineseDesc = "Gentle, quiet, elegant, and alert; quick, skillful, kind, and patient";
                 break;
-
             case 8:
                 chinese = "Dragon";
                 chineseDesc = "Confident, intelligent, ambitious, persevering, and hardworking";
                 break;
-
             case 9:
                 chinese = "Snake";
                 chineseDesc = "Intelligent, courageous, confident, insightful, and communicative";
                 break;
-
             case 10:
                 chinese = "Horse";
                 chineseDesc = "Animated, kind, straightforward, active, and energetic";
                 break;
-
             case 11:
                 chinese = "Goat";
                 chineseDesc = "Gentle, shy, stable, sympathetic, and amicable";
                 break;
-
             case 0:
                 chinese = "Monkey";
                 chineseDesc = "Witty, intelligent, ambitious, and adventurous";
                 break;
-
             case 1:
                 chinese = "Rooster";
                 chineseDesc = "Observant, hardworking, resourceful, courageous, and talented";
                 break;
-
             case 2:
                 chinese = "Dog";
                 chineseDesc = "Loyal, honest, amiable, kind, cautious, and prudent";
                 break;
-
             case 3:
                 chinese = "Pig";
                 chineseDesc = "Diligent, compassionate, generous, easy-going, and gentle";
                 break;
-
             default:
                 chinese = "Monkey";
                 chineseDesc = "Witty, intelligent, ambitious, and adventurous";
@@ -164,39 +146,32 @@ public class DisplayInfo extends AppCompatActivity  {
         }
 
         switch(Year % 10){
-
             case 0:
             case 1:
                 element = "Metal";
                 break;
-
             case 2:
             case 3:
                 element = "Water";
                 break;
-
             case 4:
             case 5:
                 element = "Wood";
                 break;
-
             case 6:
             case 7:
                 element = "Fire";
                 break;
-
             case 8:
             case 9:
                 element = "Earth";
                 break;
-
             default:
                 element = "Metal";
         }
     }
 
     public void output(){
-
         String outputStr = "";
         outputStr += "Name: " + Name;
         outputStr += "\n" + setCurrentDate();
@@ -206,7 +181,6 @@ public class DisplayInfo extends AppCompatActivity  {
         outputStr += "\n\nChinese zodiac sign: " + chinese;
         outputStr += "\n" + chineseDesc;
         outputStr += "\nElement: " + element;
-
         textViewDisplayInfo.append(outputStr);
     }
 
@@ -216,7 +190,6 @@ public class DisplayInfo extends AppCompatActivity  {
         int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH);      // 0 to 11
         int day = cal.get(Calendar.DAY_OF_MONTH);
-
         return ("Today's date: " + (month+1) + "/" + day + "/" + year);
     }
 
