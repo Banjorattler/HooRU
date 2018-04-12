@@ -60,9 +60,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void initializeAndValidate(){
+
         editTextName = findViewById(R.id.editTextName);
         buttonSubmit = findViewById(R.id.buttonSubmit);
-        editTextName.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+        editTextName.setOnFocusChangeListener(new View.OnFocusChangeListener(){
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
                 if (editTextName.getText().toString().equals("")) {
@@ -73,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     CharSequence validButton = "Submit";
                     buttonSubmit.setText(validButton);
                     buttonSubmit.setEnabled(true);
+                    buttonSubmit.findFocus();
                     buttonSubmit.setOnClickListener(new View.OnClickListener(){
                         @Override
                         public void onClick(View v) {
