@@ -227,7 +227,7 @@ public class DisplayInfo extends AppCompatActivity  {
             else if((Month + 1) == 4 || (Month + 1) == 6 || (Month + 1) == 9 || (Month + 1) == 11){
                 daysOld = (30 - Day) + currentDate.get(Calendar.DAY_OF_MONTH);
             }
-            else if((Month + 1) == 2 && (currentDate.get(Calendar.YEAR) % 4 == 0) || (currentDate.get(Calendar.YEAR) % 100 == 0) || (currentDate.get(Calendar.YEAR) % 400 ==0)){
+            else if((Month + 1) == 2 && (currentDate.get(Calendar.YEAR) % 4 == 0) || (currentDate.get(Calendar.YEAR) % 100 == 0) && (currentDate.get(Calendar.YEAR) % 400 ==0)){
                 daysOld = (29 - Day) + currentDate.get(Calendar.DAY_OF_MONTH);
             }
             else{
@@ -277,7 +277,7 @@ public class DisplayInfo extends AppCompatActivity  {
         else{
             dayOfYear = Day;
         }
-        if(Year % 4 == 0 || Year % 100 == 0 || Year % 400 == 0 && Month > 1 && Day != 29){
+        if((Year % 4 == 0 || Year % 100 == 0 && Year % 400 == 0) && Month > 1 && Day != 29){
             ++dayOfYear;
         }
     }
