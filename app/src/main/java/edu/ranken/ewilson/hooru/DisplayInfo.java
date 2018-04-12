@@ -277,7 +277,7 @@ public class DisplayInfo extends AppCompatActivity  {
         else{
             dayOfYear = Day;
         }
-        if((Year % 4 == 0 || Year % 100 == 0 && Year % 400 == 0) && Month > 1 && Day != 29){
+        if((Year % 4 == 0 || Year % 100 == 0 && Year % 400 == 0) && Month > 1){
             ++dayOfYear;
         }
     }
